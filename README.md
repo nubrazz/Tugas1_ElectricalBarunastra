@@ -1,1 +1,1 @@
-# Tugas1_ElectricalBarunastra
+# Tugas1_ElectricalBarunastra ERC dan FERC
