@@ -111,3 +111,17 @@ Receiver board bertugas menginterpretasikan perintah dari transmitter dan mengon
   - Memberikan daya untuk receiver board dan semua komponen yang terhubung.
 
 ---
+
+
+# Perbedaan Utama: ESC vs Throttle Servo dan Penambahan Ignition Controller
+
+Pada sistem **Fuel Engine Remote Control (FERC)**, terdapat dua perbedaan utama dibandingkan dengan **Electrical Remote Control (ERC)**:
+
+1. **Penggantian ESC dengan Throttle Servo**  
+   - **ESC (Electronic Speed Controller)** digunakan pada ERC untuk mengatur kecepatan motor listrik.  
+   - Pada FERC, motor listrik digantikan oleh **engine berbahan bakar**, sehingga kontrol kecepatan dilakukan melalui **Throttle Servo** yang mengatur bukaan throttle mesin berbahan bakar.
+
+2. **Penambahan Ignition Controller**  
+   - **Ignition Controller** diperlukan pada FERC untuk mengatur sistem pengapian pada mesin berbahan bakar. Komponen ini memastikan mesin dapat menyala dan bekerja sesuai perintah yang diberikan dari transmitter board.
+
+---
