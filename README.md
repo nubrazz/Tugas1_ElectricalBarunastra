@@ -1,4 +1,4 @@
-# Pengenalan Git dan Github
+# Tugas Diagram ERC dan FERC
 
 | Nama | Division | Sub-Division |
 | ----- | ---------- | ---------- |
