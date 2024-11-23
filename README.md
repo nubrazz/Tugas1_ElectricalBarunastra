@@ -1,1 +1,5 @@
-# Tugas1_ElectricalBarunastra ERC dan FERC
+# Pengenalan Git dan Github
+
+| Nama | Division | Sub-Division |
+| ----- | ---------- | ---------- |
+| Nibras Faros Siahaan | ELC | Microcontroller |
