@@ -5,67 +5,54 @@
 | Nibras Faros Siahaan | ELC | Microcontroller |
 
 
-# ERC
+# Sistem Electric Remote Control (ERC)
 
-Berikut diagram yang saya buat
+Repository ini berisi desain dan penjelasan tentang **Electric Remote Control (ERC)**. Sistem ERC dirancang untuk mengontrol motor listrik dan servo secara nirkabel menggunakan konfigurasi transmitter dan receiver.
 
 ![ERC_Diagram](https://github.com/user-attachments/assets/da540e29-be60-4c41-bbc6-b068dba18e7d)
 
-Ada 2 board yaitu board transmitter dan juga board receiver
+---
 
-## Transmitter
+## **Deskripsi Sistem**
 
-Electric Remote Control (ERC) System
-This repository contains the design and explanation of an Electric Remote Control (ERC) system. The ERC system is designed to wirelessly control an electric motor and servo system through a transmitter and receiver configuration.
+Sistem ERC terdiri dari dua komponen utama:
+1. **Transmitter Board**: Antarmuka pengguna untuk mengirimkan sinyal kontrol.
+2. **Receiver Board**: Pengontrol yang memproses perintah dan mengelola motor serta servo.
 
+Komunikasi antara kedua papan menggunakan **protokol SPI**.
 
-System Overview
-The ERC system consists of two primary components:
+---
 
-Transmitter Board: The user interface for sending control signals.
-Receiver Board: The controller that processes commands and manages the motor and servo.
-Communication between the two boards is achieved using the SPI protocol.
+## **Penjelasan Diagram**
 
-Diagram Explanation
-1. Transmitter Board
-The transmitter board is responsible for generating control signals and relaying them to the receiver. Its components include:
+### **1. Transmitter Board**
+Transmitter board bertugas menghasilkan sinyal kontrol dan mengirimkannya ke receiver. Komponennya meliputi:
+- **Microcontroller**:
+  - Memproses sinyal input dari tombol.
+  - Mengirimkan data ke modul transmitter.
+  - Memperbarui LED Display dengan informasi sistem.
+- **Transmitter**:
+  - Mengirimkan sinyal kontrol secara nirkabel ke receiver.
+- **LED Display**:
+  - Menampilkan informasi sistem, seperti status koneksi atau level baterai.
+- **Buttons**:
+  - Memberikan input untuk mengontrol motor dan servo (misalnya: throttle naik/turun, start/stop).
+- **Battery**:
+  - Memberikan daya untuk transmitter board.
 
-Microcontroller:
-Processes input signals from buttons.
-Sends data to the transmitter module.
-Updates the LED display with relevant system information.
-Transmitter:
-Sends control signals wirelessly to the receiver.
-LED Display:
-Displays system information such as the status of the connection or battery levels.
-Buttons:
-Provides input for controlling the motor and servo (e.g., throttle up/down, start/stop).
-Battery:
-Powers the transmitter board.
-2. Receiver Board
-The receiver board interprets commands sent by the transmitter and controls the motor and servo accordingly. Its components include:
+### **2. Receiver Board**
+Receiver board bertugas menginterpretasikan perintah dari transmitter dan mengontrol motor serta servo sesuai perintah. Komponennya meliputi:
+- **Receiver**:
+  - Menerima sinyal nirkabel dari transmitter board.
+- **Microcontroller**:
+  - Memproses data yang diterima dan menghasilkan sinyal kontrol untuk ESC dan servo.
+- **ESC (Electronic Speed Controller)**:
+  - Mengontrol kecepatan dan arah motor berdasarkan perintah dari microcontroller.
+- **Motor**:
+  - Melakukan gerakan sesuai perintah dari ESC.
+- **Servo**:
+  - Mengatur sudut atau posisi komponen mekanis.
+- **Battery**:
+  - Memberikan daya untuk receiver board dan semua komponen yang terhubung.
 
-Receiver:
-Receives wireless signals from the transmitter board.
-Microcontroller:
-Processes the received data and generates control signals for the ESC and servo.
-ESC (Electronic Speed Controller):
-Controls the speed and direction of the motor based on commands from the microcontroller.
-Motor:
-Executes movement based on ESC commands.
-Servo:
-Adjusts the angle or position of a mechanical component.
-Battery:
-Powers the receiver board and all connected components.
-Communication Protocol
-The transmitter and receiver communicate using the SPI protocol for fast and reliable data exchange.
-
-Features
-Wireless Communication: Enables seamless control between the transmitter and receiver.
-Dynamic Motor Control: Adjusts motor speed and direction using the ESC.
-Servo Adjustment: Allows precise positioning using a servo.
-User Feedback: The LED display provides real-time system information to the user.
-Future Improvements
-Adding sensors for telemetry data such as battery levels, RPM, or temperature.
-Implementing bi-directional communication for real-time feedback from the receiver to the transmitter.
-Enhancing security with encryption protocols for communication
+---
