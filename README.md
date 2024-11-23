@@ -5,15 +5,15 @@
 | Nibras Faros Siahaan | ELC | Microcontroller |
 
 
-# Sistem Electric Remote Control (ERC)
+# Electrical Remote Control (ERC)
 
-Repository ini berisi desain dan penjelasan tentang **Electric Remote Control (ERC)**. Sistem ERC dirancang untuk mengontrol motor listrik dan servo secara nirkabel menggunakan konfigurasi transmitter dan receiver.
+Repository ini berisi desain dan penjelasan tentang **Electrical Remote Control (ERC)**. Sistem ERC dirancang untuk mengontrol motor listrik dan servo secara nirkabel menggunakan konfigurasi transmitter dan receiver.
 
 ![ERC_Diagram](https://github.com/user-attachments/assets/da540e29-be60-4c41-bbc6-b068dba18e7d)
 
 ---
 
-## **Deskripsi Sistem**
+## **Overview Sistem**
 
 Sistem ERC terdiri dari dua komponen utama:
 1. **Transmitter Board**: Antarmuka pengguna untuk mengirimkan sinyal kontrol.
@@ -51,7 +51,7 @@ Receiver board bertugas menginterpretasikan perintah dari transmitter dan mengon
 - **Motor**:
   - Melakukan gerakan sesuai perintah dari ESC.
 - **Servo**:
-  - Mengatur sudut atau posisi komponen mekanis.
+  - Mengatur sudut atau posisi komponen mekanis (contohnya rudder).
 - **Battery**:
   - Memberikan daya untuk receiver board dan semua komponen yang terhubung.
 
